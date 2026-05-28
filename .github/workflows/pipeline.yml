@@ -34,4 +34,4 @@ jobs:
         run: |
           git config --global user.email "divyabhangre@gmail.com"
           git config --global user.name "divyabhangre"
-          git push https://divyabhangre:$HF_TOKEN@huggingface.co/spaces/divyabhangre/tourism-package-predict main
+          git push https://divyabhangre:$HF_TOKEN@huggingface.co/spaces/divyabhangre/tourism-package-predict main --force
