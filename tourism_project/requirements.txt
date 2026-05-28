@@ -6,3 +6,5 @@ xgboost
 joblib
 huggingface_hub
 datasets
+mlflow
+pyngrok
