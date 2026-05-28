@@ -13,7 +13,7 @@ jobs:
       - name: ✅ Checkout Code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # ← fixes shallow update error
+          fetch-depth: 0
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v4
@@ -34,6 +34,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git config --global user.email "divyabhangre@gmail.com"
-          git config --global user.name "divyabhangre"
-          git push https://divyabhangre:$HF_TOKEN@huggingface.co/spaces/divyabhangre/tourism-package-predict main --force
+          python tourism_project/model_building/hosting.py
